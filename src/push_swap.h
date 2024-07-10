@@ -22,4 +22,9 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
+// Parsing
+int    parse_input(int argc, char *argv[]);
+int		count_nums(char *s, char c);
+void	free_str_arr(char **str_arr);
+
 #endif
