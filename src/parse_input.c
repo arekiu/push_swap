@@ -1,21 +1,5 @@
 #include "push_swap.h"
 
-int is_int(char *str)
-{
-    int i;
-
-    i = 0;
-    if(str[i] == '-' || str[i] == '+')
-        i++;
-    while(str[i] != '\0')
-    {
-        if (!ft_isdigit(str[i]))
-            return (0);
-        i++;            
-    }
-    return (1);
-}
-
 int *parse_str2(char *str_arr[], int len)
 {
     int		*num_arr;
@@ -40,14 +24,15 @@ int	*parse_str(char *str)
 {
 	int		*num_arr;
 	int		i;
-	int		len;
 	char	**str_arr;
 
 	i = 0;
-	len = 0;
 	str_arr = ft_split(str, ' ');
-	while(str_arr[len] != NULL)
-		len++;
+    if (has_duplicates(str_arr))
+    {
+        free_str_arr(str_arr);
+        return (0);
+    }
     while (str_arr[i] != NULL)
     {
         if(!is_int(str_arr[i]))
@@ -58,7 +43,7 @@ int	*parse_str(char *str)
         }
         i++;
     }
-    num_arr = parse_str2(str_arr, len);
+    num_arr = parse_str2(str_arr, i);
 	free_str_arr(str_arr);
 	return (num_arr);
 }
@@ -69,6 +54,8 @@ int *parse_multi(int argc, char *argv[])
     int		*num_arr;
 
     i = 0;
+    if (has_duplicates(argv))
+        return (0);
     num_arr = malloc(sizeof(int) * (argc - 1));
     if (!num_arr)
         return (NULL);

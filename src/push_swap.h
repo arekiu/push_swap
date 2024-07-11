@@ -26,5 +26,7 @@ typedef struct s_list
 int    parse_input(int argc, char *argv[]);
 int		count_nums(char *s, char c);
 void	free_str_arr(char **str_arr);
+int		has_duplicates(char *arr[]);
+int is_int(char *str);
 
 #endif
