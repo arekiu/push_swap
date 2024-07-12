@@ -15,6 +15,8 @@ int *parse_str2(char *str_arr[], int len)
 	while (i < len)
 	{
 		num_arr[i] = ft_atoi(str_arr[i]);
+        if (num_arr[i] > INT_MAX || num_arr[i] < INT_MIN)
+            return(free_invalid(num_arr));
 		i++;
 	}
     return (num_arr);
@@ -62,38 +64,24 @@ int *parse_multi(int argc, char *argv[])
     while (i < argc - 1)
     {   
         if(!is_int(argv[i + 1]))
-        {
-            ft_printf("invalid input\n");
-            free (num_arr);
-            return (0);
-        }
+            return(free_invalid(num_arr));
         num_arr[i] = ft_atoi(argv[i + 1]);
+        if (num_arr[i] > INT_MAX || num_arr[i] < INT_MIN)
+            return(free_invalid(num_arr));
 		i++;
     }
     return (num_arr);
 }
 
-int   parse_input(int argc, char *argv[])
+int   *parse_input(int argc, char *argv[])
 {
     int *int_arr;
-    int i;
 
     if (argc == 2)
-    {
-        if(count_nums(argv[1], ' ') == 1)
-            return (0);
         int_arr = parse_str(argv[1]);
-    }
     else 
         int_arr = parse_multi(argc, argv);
     if (!int_arr)
             return (0);
-    i = 0;
-	while (i < 4)
-	{
-		ft_printf("El num %d\n", int_arr[i]);
-		i++;
-	}
-	free (int_arr);
-    return (1);
+    return (int_arr);
 }
