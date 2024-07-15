@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:34:51 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 14:12:28 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/15 16:30:44 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,12 @@ void	sort_list(int *arr, int size)
 	stack_a = initialize_list(arr, size);
 	free(arr);
 	print_list(stack_a);
+	if (is_sorted(stack_a))
+		return;
 	if (size == 2)
 		sort_two(&stack_a);
+	if (size == 3)
+		sort_three(&stack_a);
 	print_list(stack_a);
 	free_list(stack_a);
 }

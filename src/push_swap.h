@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:42:17 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 14:46:41 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/15 16:28:35 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,11 @@ t_list	*add_new(int value);
 void	append_node(t_list **head, int value);
 void	print_list(t_list *head);
 void	free_list(t_list *head);
+int		is_sorted(t_list *head);
 
 //sort
 void	sort_two(t_list **head);
+void	sort_three(t_list **head);
 
 //swap
 void	swap(t_list **head);
@@ -51,4 +53,10 @@ void	rotate(t_list **head);
 void	ra(t_list **stack_a);
 void	rb(t_list **stack_b);
 void	rr(t_list **stack_a, t_list **stack_b);
+
+//rev_rotate
+void	rev_rotate(t_list **head);
+void	rra(t_list **stack_a);
+void	rrb(t_list **stack_b);
+void	rrr(t_list **stack_a, t_list **stack_b);
 #endif

@@ -6,13 +6,13 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 13:05:31 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 13:38:23 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/15 15:53:45 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long long	convert_to_ll(const char *str, int negative)
+static long long	ft_convert_to_ll(const char *str, int negative)
 {
 	int			i;
 	long long	new_num;
