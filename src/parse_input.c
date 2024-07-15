@@ -4,6 +4,7 @@ int *parse_str2(char *str_arr[], int len)
 {
     int		*num_arr;
     int     i;
+    long long   num;
 
     i = 0;
     num_arr = malloc(sizeof(int) * len);
@@ -14,9 +15,10 @@ int *parse_str2(char *str_arr[], int len)
 	}
 	while (i < len)
 	{
-		num_arr[i] = ft_atoi(str_arr[i]);
-        if (num_arr[i] > INT_MAX || num_arr[i] < INT_MIN)
+        num = ft_atoll(str_arr[i]);
+        if (num > INT_MAX || num < INT_MIN)
             return(free_invalid(num_arr));
+		num_arr[i] = (int)num;
 		i++;
 	}
     return (num_arr);
@@ -39,7 +41,7 @@ int	*parse_str(char *str)
     {
         if(!is_int(str_arr[i]))
         {
-            ft_printf("invalid input\n");
+            ft_printf("Invalid input\n");
             free_str_arr(str_arr);
             return (0);
         }
@@ -54,6 +56,7 @@ int *parse_multi(int argc, char *argv[])
 {
     int i;
     int		*num_arr;
+    long long   num;
 
     i = 0;
     if (has_duplicates(argv))
@@ -65,9 +68,10 @@ int *parse_multi(int argc, char *argv[])
     {   
         if(!is_int(argv[i + 1]))
             return(free_invalid(num_arr));
-        num_arr[i] = ft_atoi(argv[i + 1]);
-        if (num_arr[i] > INT_MAX || num_arr[i] < INT_MIN)
+        num = ft_atoll(argv[i + 1]);
+        if (num > INT_MAX || num < INT_MIN)
             return(free_invalid(num_arr));
+		num_arr[i] = (int)num;
 		i++;
     }
     return (num_arr);

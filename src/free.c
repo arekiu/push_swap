@@ -15,7 +15,7 @@ void free_str_arr(char **str_arr)
 
 int *free_invalid(int *int_arr)
 {
-    ft_printf("invalid input\n");
+    ft_printf("Invalid input\n");
     free (int_arr);
     return (0);
 }
