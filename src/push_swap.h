@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:42:17 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 14:08:26 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/15 14:46:41 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,12 @@ void	sort_two(t_list **head);
 //swap
 void	swap(t_list **head);
 void	sa(t_list **stack_a);
+void	sb(t_list **stack_b);
+void	ss(t_list **stack_a, t_list **stack_b);
 
+//rotate
+void	rotate(t_list **head);
+void	ra(t_list **stack_a);
+void	rb(t_list **stack_b);
+void	rr(t_list **stack_a, t_list **stack_b);
 #endif

@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:34:51 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 13:48:53 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/15 14:12:28 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,15 @@ t_list	*initialize_list(int *arr, int size)
 
 void	sort_list(int *arr, int size)
 {
-	t_list	*head;
+	t_list	*stack_a;
 
-	head = initialize_list(arr, size);
+	stack_a = initialize_list(arr, size);
 	free(arr);
-	print_list(head);
+	print_list(stack_a);
 	if (size == 2)
-		sort_two(&head);
-	print_list(head);
-	free_list(head);
+		sort_two(&stack_a);
+	print_list(stack_a);
+	free_list(stack_a);
 }
 
 int	main(int argc, char *argv[])
