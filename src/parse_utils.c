@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_utils.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/15 14:03:55 by aschmidt          #+#    #+#             */
+/*   Updated: 2024/07/15 14:09:22 by aschmidt         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	count_nums(char *s, char c)
@@ -20,11 +32,11 @@ int	count_nums(char *s, char c)
 	return (counter);
 }
 
-int has_duplicates(char *arr[])
+int	has_duplicates(char *arr[])
 {
-	int	i;
-	int j;
-	char 	*str;
+	int		i;
+	int		j;
+	char	*str;
 
 	i = 0;
 	while (arr[i] != NULL)
@@ -42,21 +54,21 @@ int has_duplicates(char *arr[])
 		}
 		i++;
 	}
-    return (0);
+	return (0);
 }
 
-int is_int(char *str)
+int	is_int(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    if(str[i] == '-' || str[i] == '+')
-        i++;
-    while(str[i] != '\0')
-    {
-        if (!ft_isdigit(str[i]))
-            return (0);
-        i++;            
-    }
-    return (1);
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] != '\0')
+	{
+		if (!ft_isdigit(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
 }

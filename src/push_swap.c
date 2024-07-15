@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aschmidt <aschmidt@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/15 14:04:30 by aschmidt          #+#    #+#             */
+/*   Updated: 2024/07/15 14:04:47 by aschmidt         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void sort_two(t_list **head)
+void	sort_two(t_list **head)
 {
-    if ((*head)->value > (*head)->next->value)
-        sa(head);
+	if ((*head)->value > (*head)->next->value)
+		sa(head);
 }
