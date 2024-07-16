@@ -27,8 +27,10 @@ void	sort_three(t_list **head)
 			sa(head);
 			rra(head);
 		}
-		else
+		else if ((*head)->value > (*head)->next->next->value)
 			ra(head);
+		else
+			sa(head);
 	}
 	else
 	{
