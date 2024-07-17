@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:04:30 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 16:37:08 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/17 12:06:49 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,13 @@ void	sort_three(t_list **head)
 			ra(head);
 		}
 	}
+}
+
+void	sort_five(t_list **stack_a)
+{
+	t_list *stack_b;
+
+	stack_b = NULL;
+
+
 }

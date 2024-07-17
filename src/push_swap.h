@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:42:17 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 16:28:35 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/17 11:58:17 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,10 @@ void	rev_rotate(t_list **head);
 void	rra(t_list **stack_a);
 void	rrb(t_list **stack_b);
 void	rrr(t_list **stack_a, t_list **stack_b);
+
+//Push
+void	push(t_list **from_list, t_list **to_list);
+void	pa(t_list **stack_b, t_list **stack_a);
+void	pb(t_list **stack_a, t_list **stack_b);
+
 #endif
