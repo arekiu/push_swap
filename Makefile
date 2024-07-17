@@ -1,7 +1,7 @@
 NAME		= push_swap
 
 SRC		= $(addprefix src/, main.c parse_input.c free.c parse_utils.c list_utils.c push_swap.c swap.c \
-			rotate.c rev_rotate.c push.c)
+			rotate.c rev_rotate.c push.c list_utils2.c)
 
 OBJ		= $(SRC:.c=.o)
 

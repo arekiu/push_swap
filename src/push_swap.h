@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:42:17 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/17 11:58:17 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/17 15:38:32 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,13 @@ void	append_node(t_list **head, int value);
 void	print_list(t_list *head);
 void	free_list(t_list *head);
 int		is_sorted(t_list *head);
+int		find_index_smallest(t_list *stack_a);
+int		list_size(t_list *head);
 
 //sort
 void	sort_two(t_list **head);
 void	sort_three(t_list **head);
+void	sort_five(t_list **stack_a);
 
 //swap
 void	swap(t_list **head);
