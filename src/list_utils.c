@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 13:45:36 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 16:29:22 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/18 10:42:30 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	append_node(t_list **head, int value)
 		current->next = new_node;
 	}
 }
+
 int	is_sorted(t_list *head)
 {
 	while (head && head->next)

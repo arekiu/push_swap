@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rev_rotate.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aschmidt <aschmidt@student.42berlin.d      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/18 10:45:24 by aschmidt          #+#    #+#             */
+/*   Updated: 2024/07/18 10:46:03 by aschmidt         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	rev_rotate(t_list **head)
@@ -9,15 +21,15 @@ void	rev_rotate(t_list **head)
 		return ;
 	prev = NULL;
 	last = *head;
-    while (last->next != NULL)
-    {
-        prev = last;
-        last = last->next;
-    }
-    if (prev)
-        prev->next = NULL;
-    last->next = *head;
-    *head = last;
+	while (last->next != NULL)
+	{
+		prev = last;
+		last = last->next;
+	}
+	if (prev)
+		prev->next = NULL;
+	last->next = *head;
+	*head = last;
 }
 
 void	rra(t_list **stack_a)

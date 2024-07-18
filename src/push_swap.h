@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:42:17 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/17 15:38:32 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/18 11:03:12 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int		list_size(t_list *head);
 //sort
 void	sort_two(t_list **head);
 void	sort_three(t_list **head);
+void	sort_four(t_list **stack_a);
 void	sort_five(t_list **stack_a);
 
 //swap
