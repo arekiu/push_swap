@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:42:17 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/18 11:03:12 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/19 13:08:30 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_list
 // Parsing
 int		*parse_input(int argc, char *argv[]);
 int		count_nums(char *s, char c);
-void	free_str_arr(char **str_arr);
+int		*free_str_arr(char **str_arr);
 int		*free_invalid(int *int_arr);
 int		has_duplicates(char *arr[]);
 int		is_int(char *str);

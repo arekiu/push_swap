@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 13:59:09 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 14:08:58 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/19 13:39:20 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ int	*parse_str2(char *str_arr[], int len)
 	i = 0;
 	num_arr = malloc(sizeof(int) * len);
 	if (!num_arr)
-	{
-		free_str_arr(str_arr);
-		return (0);
-	}
+		return (free_str_arr(str_arr));
 	while (i < len)
 	{
 		num = ft_atoll(str_arr[i]);
 		if (num > INT_MAX || num < INT_MIN)
-			return (free_invalid(num_arr));
+		{
+			free_invalid(num_arr);
+			return (NULL);
+		}
 		num_arr[i] = (int)num;
 		i++;
 	}
@@ -45,21 +45,16 @@ int	*parse_str(char *str)
 	i = 0;
 	str_arr = ft_split(str, ' ');
 	if (has_duplicates(str_arr))
-	{
-		free_str_arr(str_arr);
-		return (0);
-	}
+		return (free_str_arr(str_arr));
 	while (str_arr[i] != NULL)
 	{
 		if (!is_int(str_arr[i]))
-		{
-			ft_printf("Invalid input\n");
-			free_str_arr(str_arr);
-			return (0);
-		}
+			return (free_str_arr(str_arr));
 		i++;
 	}
 	num_arr = parse_str2(str_arr, i);
+	if (!num_arr)
+		return (free_str_arr(str_arr));
 	free_str_arr(str_arr);
 	return (num_arr);
 }
@@ -98,6 +93,9 @@ int	*parse_input(int argc, char *argv[])
 	else
 		int_arr = parse_multi(argc, argv);
 	if (!int_arr)
+	{
+		write(2, "Error\n", 6);
 		return (0);
+	}
 	return (int_arr);
 }

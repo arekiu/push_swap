@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:03:55 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 14:09:22 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/19 12:42:06 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,7 @@ int	has_duplicates(char *arr[])
 		while (arr[j] != NULL)
 		{
 			if (ft_strcmp(str, arr[j]) == 0)
-			{
-				ft_printf("Duplicates are not allowed\n");
 				return (1);
-			}
 			j++;
 		}
 		i++;
@@ -62,6 +59,8 @@ int	is_int(char *str)
 	int	i;
 
 	i = 0;
+	if (str[0] == '\0' || ((str[0] == '-' || str[0] == '+') && str[1] == '\0'))
+		return (0);
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i] != '\0')

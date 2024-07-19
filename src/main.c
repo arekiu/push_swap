@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:34:51 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/18 18:04:05 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/19 13:42:10 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,18 +56,8 @@ int	main(int argc, char *argv[])
 	int	*int_arr;
 	int	size;
 
-	if (argc == 1)
-	{
-		ft_printf("You must provide a list of numbers\n");
-		return (0);
-	}
-	else if (argc == 2)
-	{
-		if (count_nums(argv[1], ' ') == 1)
-			return (0);
-		else
-			size = count_nums(argv[1], ' ');
-	}
+	if (argc == 2)
+		size = count_nums(argv[1], ' ');
 	else
 		size = argc - 1;
 	int_arr = parse_input(argc, argv);

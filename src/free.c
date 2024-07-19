@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aschmidt <aschmidt@student.42berlin.d      +#+  +:+       +#+        */
+/*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 13:40:51 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/15 13:40:56 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/19 13:13:05 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_str_arr(char **str_arr)
+int	*free_str_arr(char **str_arr)
 {
 	int	i;
 
@@ -23,11 +23,11 @@ void	free_str_arr(char **str_arr)
 		i++;
 	}
 	free(str_arr);
+	return (NULL);
 }
 
 int	*free_invalid(int *int_arr)
 {
-	ft_printf("Invalid input\n");
 	free (int_arr);
-	return (0);
+	return (NULL);
 }
