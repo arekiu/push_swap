@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 13:45:36 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/18 10:42:30 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/23 16:03:28 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list	*add_new(int value)
 	if (!new_node)
 		return (NULL);
 	new_node->value = value;
+	new_node->index = -1;
 	new_node->next = NULL;
 	return (new_node);
 }
@@ -63,7 +64,7 @@ void	print_list(t_list *head)
 	current = head;
 	while (current != NULL)
 	{
-		ft_printf("%d -> ", current->value);
+		ft_printf("val %d, ix %d -> ", current->value, current->index);
 		current = current->next;
 	}
 	ft_printf("NULL\n");

@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:42:17 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/19 13:08:30 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/23 16:03:55 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct s_list
 {
 	int				value;
+	int				index;
 	struct s_list	*next;
 }				t_list;
 
@@ -39,12 +40,15 @@ void	free_list(t_list *head);
 int		is_sorted(t_list *head);
 int		find_index_smallest(t_list *stack_a);
 int		list_size(t_list *head);
+void	give_index(t_list **stack_a);
+t_list	*find_next_smallest(t_list **stack_a);
 
 //sort
 void	sort_two(t_list **head);
 void	sort_three(t_list **head);
 void	sort_four(t_list **stack_a);
 void	sort_five(t_list **stack_a);
+void	sort_more(t_list **stack_a);
 
 //swap
 void	swap(t_list **head);
