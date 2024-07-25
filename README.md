@@ -17,6 +17,7 @@ This project involves implementing a sorting algorithm in C that sorts integers 
 Two stacks are used: a and b.
 At the beginning, stack a contains a set of unique random integers, and stack b is empty.
 The goal is to sort the integers in stack a in ascending order using the following operations:
+
     * sa (swap a): Swap the top two elements of stack a.
     * sb (swap b): Swap the top two elements of stack b.
     * ss: Perform sa and sb simultaneously.
