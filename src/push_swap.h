@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:42:17 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/23 16:03:55 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/25 09:40:33 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,11 @@ void	sort_two(t_list **head);
 void	sort_three(t_list **head);
 void	sort_four(t_list **stack_a);
 void	sort_five(t_list **stack_a);
-void	sort_more(t_list **stack_a);
+void	sort_more(t_list **stack_a, int size);
+
+//radix
+int		get_bits(t_list **stack_a);
+void	radix(t_list **stack_a, t_list **stack_b, int size);
 
 //swap
 void	swap(t_list **head);

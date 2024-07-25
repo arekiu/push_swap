@@ -6,7 +6,7 @@
 /*   By: aschmidt <aschmidt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 10:49:43 by aschmidt          #+#    #+#             */
-/*   Updated: 2024/07/23 15:53:18 by aschmidt         ###   ########.fr       */
+/*   Updated: 2024/07/25 10:01:55 by aschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int	list_size(t_list *head)
 	}
 	return (i);
 }
+
 t_list	*find_next_smallest(t_list **stack_a)
 {
 	t_list		*head;
@@ -63,7 +64,8 @@ t_list	*find_next_smallest(t_list **stack_a)
 	{
 		while (head)
 		{
-			if ((head->index == -1) && (!found || head->value < smallest->value))
+			if ((head->index == -1) && \
+					(!found || head->value < smallest->value))
 			{
 				smallest = head;
 				found = 1;
